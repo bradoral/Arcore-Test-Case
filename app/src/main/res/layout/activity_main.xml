@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.greenmagics.ar.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/sceneForm"
+            android:name="com.google.ar.sceneform.ux.ArFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/visualizer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/remove"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+
+                    android:foregroundTint="@color/white"
+                    android:src="@drawable/ic_delete"
+                    app:backgroundTint="@color/red" />
+
+
+                <rm.com.audiowave.AudioWaveView
+                    android:id="@+id/mywave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="2"
+                    android:forceHasOverlappingRendering="true"
+                    android:visibility="visible"
+                    app:animateExpansion="false"
+                    app:chunkHeight="35dp"
+                    app:chunkRadius="3dp"
+                    app:chunkSpacing="3dp"
+                    app:chunkWidth="5dp"
+                    app:minChunkHeight="15dp"
+                    app:progress="100"
+                    app:touchable="false"
+                    app:waveColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <com.greenmagics.ar.Utils.CustomFloatingActionButton
+                android:id="@+id/record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:foregroundTint="@color/white"
+                android:visibility="gone"
+                app:backgroundTint="@color/red"
+                app:elevation="8dp"
+                app:srcCompat="@drawable/ic_microphone" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/inbox_bt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="10dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_inbox_toggle" />
+        <TextView
+            android:id="@+id/user_id_view"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/darkgrey"
+            android:background="@color/grey"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_height="50dp"
+            android:layout_gravity="top|start"
+            android:gravity="center"
+            android:text="@string/id"
+            android:layout_margin="10dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/drawer"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/inbox_list"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="10dp" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+
