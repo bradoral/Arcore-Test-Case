@@ -28,7 +28,7 @@
 
         <meta-data
             android:name="com.google.android.ar.API_KEY"
-            android:value="AIzaSyB4ISHgQwKeHp2Rl0lcxyt3vVmI9AgVCbc"/>
+            android:value="key here"/>
         <!-- Indicates that app requires ARCore ("AR Required"). Causes Google
         Play Store to download and install ARCore when the app is installed.
    -->
