@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "530510261893",
-    "firebase_url": "https://myarproj-22c33.firebaseio.com",
-    "project_id": "myarproj-22c33",
-    "storage_bucket": "myarproj-22c33.appspot.com"
+    "project_number": "",
+    "firebase_url": "",
+    "project_id": "",
+    "storage_bucket": ""
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:530510261893:android:b12f282d905b927d",
+        "mobilesdk_app_id": "",
         "android_client_info": {
           "package_name": "com.greenmagics.ar"
         }
       },
       "oauth_client": [
         {
-          "client_id": "530510261893-m6ep0tpdd8nca11p40n0uh4j7ucbsden.apps.googleusercontent.com",
+          "client_id": "",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB7QffXbKrVu6e_pDtMPn0hrWqdhXdQUno"
+          "current_key": ""
         }
       ],
       "services": {
